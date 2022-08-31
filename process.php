@@ -9,6 +9,6 @@ $areas = json_decode($areas);
 //var_dump($area->features);
 //var_dump($areas->features);
 
-$areas->features [] = $area->features;
+$areas->features [] = $area->features[0];
 
 file_put_contents('areas.json', json_encode($areas));
