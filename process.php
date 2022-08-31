@@ -11,6 +11,7 @@ $areas = json_decode($areas);
 
 $data = $area->features[0];
 $data->id = 11;
+$data->properties = new stdClass();
 $data->properties->state = "wa";
 $data->properties->link = "/reports/kimberley-region-smart-property-investment";
 $data->properties->area = "The Kimberley";
