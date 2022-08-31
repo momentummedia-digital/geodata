@@ -9,6 +9,12 @@ $areas = json_decode($areas);
 //var_dump($area->features);
 //var_dump($areas->features);
 
-$areas->features [] = $area->features[0];
+$data = $area->features[0];
+$data->id = 11;
+$data->properties->state = "wa";
+$data->properties->link = "/reports/kimberley-region-smart-property-investment";
+$data->properties->area = "The Kimberley";
+
+$areas->features [] = $data;
 
 file_put_contents('areas.json', json_encode($areas));
