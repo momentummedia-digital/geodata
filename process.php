@@ -9,7 +9,9 @@ $areas = json_decode($areas);
 //var_dump($area->features);
 //var_dump($areas->features);
 
-$data = $area->features[0];
+$data = new stdClass();
+$data->type = 'Feature';
+$data->geometry = $area->geometries[0];
 $data->id = 11;
 $data->properties = new stdClass();
 $data->properties->state = "wa";
